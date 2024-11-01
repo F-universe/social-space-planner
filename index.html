@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Layout - Interactive People Map</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Social Layout - Add People and Connections</h2>
+<div style="text-align: center;">
+  <button onclick="selectShape('circle')">Woman (Circle)</button>
+  <button onclick="selectShape('square')">Man (Square)</button>
+  <button onclick="startConnection()">Connection</button>
+  <button id="editButton" onclick="toggleEditMode()">Edit</button>
+</div>
+
+<!-- Button with a question mark for help information -->
+<button class="help-button" onclick="openHelp()">?</button>
+
+<div class="settings" id="settings">
+  <label>
+    Size:
+    <input type="number" id="sizeInput" value="40" min="10" max="100"> px
+  </label>
+  <label>
+    Color:
+    <select id="colorInput">
+      <option value="black">Black</option>
+      <option value="yellow">Yellow</option>
+    </select>
+  </label>
+  <label>
+    Energy (Glow):
+    <input type="range" id="glowInput" value="10" min="0" max="50" step="1">
+  </label>
+</div>
+
+<div class="rectangle" id="rectangleContainer" onclick="addShape(event)">
+  <!-- Main rectangle for people and connections -->
+</div>
+
+<div id="message" class="message">Select the first and second object</div>
+
+<script src="script.js"></script>
+</body>
+</html>
